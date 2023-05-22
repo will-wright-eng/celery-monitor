@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/lab": "^4.0.0-alpha.54",
+    "axios": "^1.4.0",
     "jwt-decode": "^3.0.0",
     "ra-data-json-server": "^3.5.2",
     "ra-data-simple-rest": "^3.3.2",

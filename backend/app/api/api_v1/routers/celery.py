@@ -26,3 +26,19 @@ async def websocket_task_status(websocket: WebSocket, task_id: str):
     while True:
         task = celery_app.AsyncResult(task_id)
         await websocket.send_text(f"Task {task_id}: {task.status}")
+
+
+# from fastapi import FastAPI
+# from tasks import example_task
+
+# app = FastAPI()
+
+@r.post("/create_task")
+async def create_task():
+    task = example_task.delay(5)  # Simulate a task that takes 5 seconds to complete
+    return {"task_id": task.id}
+
+@r.get("/task_status/{task_id}")
+async def task_status(task_id: str):
+    task = example_task.AsyncResult(task_id)
+    return {"status": task.status, "result": task.result}

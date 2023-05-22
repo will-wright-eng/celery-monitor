@@ -8,6 +8,8 @@
 > TypeScript error in /app/src/index.tsx(8,4):
 > 'Router' cannot be used as a JSX component.
 
+- in frontend/ run `npm install --save react@17.0.0 --legacy-peer-deps`
+
 # readme
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -46,7 +46,7 @@ app.include_router(
 )
 app.include_router(
     celery_router,
-    prefix="/api/v1",
+    prefix="/api/v1/celery",
     tags=["celery"],
     dependencies=[Depends(get_current_active_user)],
 )

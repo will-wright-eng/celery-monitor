@@ -47,6 +47,12 @@ export const Home: FC = () => {
       <a className={classes.link} href="/protected">
         Protected Route
       </a>
+      <a className={classes.link} href="/celery">
+        Celery
+      </a>
+      <a className={classes.link} href="/celerymonitor">
+        Celery Monitor
+      </a>
       {isAuthenticated() ? (
         <a className={classes.link} href="/logout">
           Logout
